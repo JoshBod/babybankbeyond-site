@@ -46,13 +46,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, {rootMargin:'-10% 0px -10% 0px', threshold:0.01});
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Safety fallback: reveal everything if observer fails
-  try {
-    if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-    }
-  } catch(e){
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-  }
-});
