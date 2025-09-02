@@ -57,7 +57,7 @@ body{
   padding:5rem 0 3.5rem;
   background:
     linear-gradient(to bottom, rgba(27,42,65,.55), rgba(27,42,65,.20)),
-    url("assets/img/hero.jpg") center/cover no-repeat; /* your image */
+   url("../img/hero.jpg") center/cover no-repeat; /* your image */
   color:#fff;
 }
 @media (max-width: 600px){ .hero{ background-position:60% center; } }
@@ -123,7 +123,12 @@ form button{margin-top:.7rem}
 
 .muted{color:var(--muted)}
 
-/* Reveal on scroll (already in your JS; still works fine) */
-.reveal{opacity:1;transform:none}
-.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease, transform .5s ease}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.btn:hover{transform:none}}.btn:hover{transform:none}}
+/* Progressive reveal */
+.reveal{opacity:1; transform:none}
+.js .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
+.js .reveal.is-visible{opacity:1; transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1; transform:none}
+  .btn:hover{transform:none}
+}
