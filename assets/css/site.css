@@ -1,67 +1,131 @@
-/* ====== Babybank & Beyond: Refined Visual Theme (v3b) ====== */
+/* ====== Babybank & Beyond: Refined Visual Theme (header on #FEF5EC) ====== */
 :root{
+  /* Brand accents (warm, harmonious with FE F5 EC) */
   --pink:#E94E77; --pink-600:#d83f68;
+
+  /* Text & accents */
   --navy:#1B2A41; --navy-700:#162233;
+
+  /* Neutrals (slightly warmer than before) */
   --cream:#FFF6F1; --paper:#ffffff;
-  --ink:#1b1b1b; --muted:#6b7280; --line:#E7E9EE;
+  --ink:#1b1b1b; --muted:#6b7280; 
+  --line:#E9E2DA; /* warm divider to match the header */
+
+  /* Header theming */
+  --header-bg:#FEF5EC;           /* your header background */
+  --header-link:#1B2A41;         /* dark links on light header */
+  --header-border:#EADFD5;       /* subtle bottom border for separation */
+
+  /* Radii & effects */
   --radius:18px; --radius-lg:26px;
   --shadow-sm:0 6px 18px rgba(0,0,0,.06);
   --shadow-md:0 14px 40px rgba(0,0,0,.10);
   --ring: 0 0 0 4px rgba(233,78,119,.18);
 }
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65;color:var(--ink);background:var(--paper);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.65;color:var(--ink);background:var(--paper);
+  text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale
+}
+
 .container{max-width:1120px;margin:0 auto;padding:0 1.25rem}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
-.logo{font-weight:900;text-decoration:none;color:var(--navy);display:flex;align-items:center;gap:.55rem;letter-spacing:.2px}
+
+.logo{font-weight:900;text-decoration:none;color:var(--header-link);display:flex;align-items:center;gap:.55rem;letter-spacing:.2px}
 .logo span{font-size:1.5rem}
-.nav-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:.55rem .8rem}
+
+.nav-toggle{
+  display:none;border:1px solid var(--header-border);background:var(--header-bg);
+  border-radius:12px;padding:.55rem .8rem;color:var(--header-link)
+}
 .nav-links{display:flex;gap:1rem;align-items:center}
-.nav-links a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+.nav-links a{color:var(--header-link);text-decoration:none;font-weight:700;letter-spacing:.2px}
 .nav-links a.btn{color:#fff}
-.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:50;backdrop-filter:saturate(1.2) blur(6px)}
-.hero{padding:5rem 0 3.5rem;background:radial-gradient(1200px 600px at 10% -10%, var(--cream), transparent 60%),radial-gradient(900px 460px at 100% -20%, rgba(233,78,119,.08), transparent 60%)}
-.hero .kicker{color:var(--pink);font-weight:900;margin:0 0 .5rem;letter-spacing:.3px}
-.hero h1{font-size:clamp(2.2rem,5vw,3.2rem);margin:.2rem 0 1rem;color:var(--navy);line-height:1.12}
-.hero .sub{max-width:62ch;font-size:1.1rem;color:#2a2a2a}
+
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:var(--header-bg);
+  border-bottom:1px solid var(--header-border);
+  backdrop-filter:saturate(1.2) blur(6px); /* optional; remove if you prefer solid */
+}
+
+/* Hero with your header graphic */
+.hero{
+  padding:5rem 0 3.5rem;
+  background:
+    linear-gradient(to bottom, rgba(27,42,65,.55), rgba(27,42,65,.20)),
+    url("assets/img/hero.jpg") center/cover no-repeat; /* your image */
+  color:#fff;
+}
+@media (max-width: 600px){ .hero{ background-position:60% center; } }
+.hero h1{ color:#fff; }
+.hero .sub{ color:#f3f4f6; }
 .hero .cta-row{display:flex;gap:1rem;margin:1.3rem 0 0}
 .service-area{color:var(--muted);font-weight:700;margin-top:.75rem}
+
+/* Offset for sticky header (no in-page section menu now) */
 [id]{scroll-margin-top:72px}
+
 .strip{padding:2.2rem 0}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow-sm)}
+.card{
+  background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow-sm)
+}
 .card h3{margin-top:0}
 .card:hover{box-shadow:var(--shadow-md)}
+
 .impact{padding:3rem 0;background:#fafafa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;padding:0;margin:1rem 0}
 .stats .big{display:block;font-size:2.2rem;font-weight:900;color:var(--navy)}
+
 .page-hero{padding:2.75rem 0;background:linear-gradient(180deg,#fafafa,#fff);border-bottom:1px solid var(--line)}
 .page-hero h1{margin:0 0 .5rem;color:var(--navy)}
+
 .grid-2{display:grid;gap:1.2rem;grid-template-columns:1fr; margin:1.6rem auto}
 .grid-3{display:grid;gap:1.2rem;grid-template-columns:1fr; margin:1.6rem auto}
 @media(min-width:920px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr 1fr}}
-.btn{display:inline-block;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none;font-weight:900;border:2px solid transparent;box-shadow:var(--shadow-sm); transition:transform .15s ease, box-shadow .15s ease, filter .2s ease}
+
+.btn{
+  display:inline-block;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none;font-weight:900;border:2px solid transparent;
+  box-shadow:var(--shadow-sm); transition:transform .15s ease, box-shadow .15s ease, filter .2s ease
+}
 .btn--primary{background:linear-gradient(180deg,var(--pink),var(--pink-600));color:#fff}
 .btn--secondary{background:linear-gradient(180deg,var(--navy),var(--navy-700));color:#fff}
 .btn:hover{filter:brightness(.98); transform:translateY(-1px); box-shadow:var(--shadow-md)}
 .btn:focus-visible{outline:none; box-shadow:var(--ring)}
+
 .link-arrow{font-weight:800;text-decoration:none;color:var(--navy)}
 .link-arrow::after{content:" →"}
+
 .list-plain{list-style:none;padding:0;margin:.5rem 0}
 .list-plain li{margin:.28rem 0}
+
 .checklist, .crosslist{padding-left:1.2rem}
 .checklist li{list-style:"✅  "}
 .crosslist li{list-style:"✖️ "}
+
 .map-embed iframe{width:100%;min-height:320px;border:0;border-radius:var(--radius-lg)}
+
 label{display:block;font-weight:800;margin:.65rem 0 .28rem}
-input, textarea{width:100%;padding:.8rem;border:1px solid var(--line);border-radius:14px;font:inherit;background:#fff;box-shadow: inset 0 2px 6px rgba(0,0,0,.02)}
+input, textarea{
+  width:100%;padding:.8rem;border:1px solid var(--line);border-radius:14px;font:inherit;background:#fff;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.02)
+}
 input:focus, textarea:focus{outline:none; box-shadow:var(--ring); border-color:transparent}
+
 .checkbox{display:flex;gap:.6rem;align-items:center;font-weight:700}
 form button{margin-top:.7rem}
+
 .site-footer{margin-top:3rem;padding:2rem 0;border-top:1px solid var(--line);background:#fff}
 .site-footer h3,.site-footer h4{margin:.2rem 0}
 .legal{text-align:center;color:var(--muted);margin-top:.8rem}
+
 .muted{color:var(--muted)}
+
+/* Reveal on scroll (already in your JS; still works fine) */
 .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
 .reveal.is-visible{opacity:1; transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none}.btn:hover{transform:none}}
