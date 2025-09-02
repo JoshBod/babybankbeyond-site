@@ -27,11 +27,7 @@ body{font-family:'Nunito',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 .hero .sub{max-width:62ch;font-size:1.1rem;color:#2a2a2a}
 .hero .cta-row{display:flex;gap:1rem;margin:1.3rem 0 0}
 .service-area{color:var(--muted);font-weight:700;margin-top:.75rem}
-.section-nav{position: sticky; top: 64px; z-index: 45;background: rgba(255,255,255,.85);border-bottom:1px solid var(--line);padding:.6rem .5rem; display:flex; gap:.5rem; overflow:auto;backdrop-filter: blur(8px)}
-.section-nav .pill{text-decoration:none; font-weight:900;border:1px solid var(--line);border-radius:999px;padding:.55rem 1rem; white-space:nowrap; color:var(--navy);box-shadow:var(--shadow-sm);transition:transform .18s ease, box-shadow .18s ease, background-color .2s ease;background:#fff}
-.section-nav .pill:hover{transform:translateY(-1px); box-shadow:var(--shadow-md)}
-.section-nav .pill.is-active, .section-nav .pill[aria-current="true"]{background:var(--navy); color:#fff; border-color:transparent}
-[id]{scroll-margin-top:96px}
+[id]{scroll-margin-top:72px}
 .strip{padding:2.2rem 0}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow-sm)}
 .card h3{margin-top:0}
