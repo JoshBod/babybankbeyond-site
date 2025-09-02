@@ -34,15 +34,15 @@ body{
 .container{max-width:1120px;margin:0 auto;padding:0 1.25rem}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
 
-.logo{font-weight:900;text-decoration:none;color:var(--header-link);display:flex;align-items:center;gap:.55rem;letter-spacing:.2px}
+.logo{color:var(--header-link);font-weight:900;text-decoration:none;color:var(--header-link);display:flex;align-items:center;gap:.55rem;letter-spacing:.2px}
 .logo span{font-size:1.5rem}
 
-.nav-toggle{
+.nav-toggle{color:var(--header-link);
   display:none;border:1px solid var(--header-border);background:var(--header-bg);
   border-radius:12px;padding:.55rem .8rem;color:var(--header-link)
 }
 .nav-links{display:flex;gap:1rem;align-items:center}
-.nav-links a{color:var(--header-link);text-decoration:none;font-weight:700;letter-spacing:.2px}
+.nav-links a{color:var(--header-link);color:var(--header-link);text-decoration:none;font-weight:700;letter-spacing:.2px}
 .nav-links a.btn{color:#fff}
 
 .site-header{
@@ -68,8 +68,6 @@ body{
 
 /* Offset for sticky header (no in-page section menu now) */
 [id]{scroll-margin-top:72px}
-
-.strip{padding:2.2rem 0}
 .card{
   background:#fff;border:1px solid var(--line);
   border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow-sm)
@@ -126,6 +124,6 @@ form button{margin-top:.7rem}
 .muted{color:var(--muted)}
 
 /* Reveal on scroll (already in your JS; still works fine) */
-.reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
-.reveal.is-visible{opacity:1; transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none}.btn:hover{transform:none}}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .5s ease, transform .5s ease}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.btn:hover{transform:none}}.btn:hover{transform:none}}
