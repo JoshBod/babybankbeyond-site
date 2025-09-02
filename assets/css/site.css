@@ -57,10 +57,10 @@ body{
   padding:5rem 0 3.5rem;
   background:
     linear-gradient(to bottom, rgba(27,42,65,.55), rgba(27,42,65,.20)),
-   url("../img/hero.jpg") center/cover no-repeat; /* your image */
+    url("../img/hero.jpg") center/cover no-repeat; /* your image */
   color:#fff;
 }
-@media (max-width: 600px){ .hero{ background-position:60% center; } }
+@media (max-width: 600px){ .hero{ background-position:60% center; }
 .hero h1{ color:#fff; }
 .hero .sub{ color:#f3f4f6; }
 .hero .cta-row{display:flex;gap:1rem;margin:1.3rem 0 0}
@@ -84,7 +84,7 @@ body{
 
 .grid-2{display:grid;gap:1.2rem;grid-template-columns:1fr; margin:1.6rem auto}
 .grid-3{display:grid;gap:1.2rem;grid-template-columns:1fr; margin:1.6rem auto}
-@media(min-width:920px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr 1fr}}
+@media(min-width:920px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr 1fr}
 
 .btn{
   display:inline-block;padding:.8rem 1.1rem;border-radius:999px;text-decoration:none;font-weight:900;border:2px solid transparent;
@@ -123,6 +123,10 @@ form button{margin-top:.7rem}
 
 .muted{color:var(--muted)}
 
+/* Reveal on scroll (already in your JS; still works fine) */
+
+.js 
+}
 /* Progressive reveal */
 .reveal{opacity:1; transform:none}
 .js .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
@@ -132,5 +136,3 @@ form button{margin-top:.7rem}
   .reveal{opacity:1; transform:none}
   .btn:hover{transform:none}
 }
-/* TEMP debug */ body{ background:#fffae8 !important; }
-
