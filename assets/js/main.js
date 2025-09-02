@@ -46,21 +46,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, {rootMargin:'-10% 0px -10% 0px', threshold:0.01});
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Scroll spy
-  const pills = Array.from(document.querySelectorAll('.section-nav a[href^="#"]'));
-  const sections = pills.map(a => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const id = entry.target.id;
-      const link = pills.find(a => a.getAttribute('href') === `#${id}`);
-      if (!link) return;
-      if (entry.isIntersecting){
-        pills.forEach(p => { p.classList.remove('is-active'); p.removeAttribute('aria-current'); });
-        link.classList.add('is-active');
-        link.setAttribute('aria-current','true');
-      }
-    });
-  }, {rootMargin:'-35% 0px -55% 0px', threshold:0.01});
-  sections.forEach(sec => spy.observe(sec));
-});
