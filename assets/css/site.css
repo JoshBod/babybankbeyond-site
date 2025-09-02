@@ -136,3 +136,7 @@ form button{margin-top:.7rem}
   .reveal{opacity:1; transform:none}
   .btn:hover{transform:none}
 }
+
+/* TEMP: disable reveal while testing */
+.js .reveal{opacity:1 !important; transform:none !important;}
+
